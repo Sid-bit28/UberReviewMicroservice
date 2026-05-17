@@ -9,7 +9,8 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@Table(name = "booking_review")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Review extends BaseModel {
     @Column(nullable = false)
     private String content;
