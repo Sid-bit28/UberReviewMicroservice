@@ -7,26 +7,16 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.util.Date;
 
-@Entity
 @Getter
 @Setter
-@Builder
-@NoArgsConstructor
 @AllArgsConstructor
-public class Review {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+@NoArgsConstructor
+@Builder
+public class Review extends BaseModel {
+    @Column(nullable = false)
     private String content;
 
     private double rating;
-
-    @Column(nullable = false)
-    @CreationTimestamp
-    private Date createdAt;
-
-    @Column(nullable = false)
-    @UpdateTimestamp
-    private Date updatedAt;
 }
+
+
