@@ -2,11 +2,8 @@ package org.example.uberreviewservice.models;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
-import java.util.Date;
-
+@Entity
 @Getter
 @Setter
 @AllArgsConstructor
